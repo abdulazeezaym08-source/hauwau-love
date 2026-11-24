@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#510b2b">
+<title>For Hauwa'u ❤️</title>
+<style>
+:root{
+  --wine:#5a0d30;
+  --rose:#a51f50;
+  --pink:#ffe5ee;
+  --ink:#482236;
+  --paper:#fffafd
+}
+*{
+  box-sizing:border-box
+}
+html{
+  scroll-behavior:smooth
+}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#fff5f8,#fffafd 45%,#ffeaf1);
+  color:var(--ink);
+  font-family:Georgia,"Times New Roman",serif;overflow-x:hidden
+}
+a{
+  color:inherit
+}
+.topbar{
+  position:absolute;
+  z-index:3;
+  top:0;left:0;
+  width:100%;
+  padding:18px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:white;
+  font:600 12px Arial,sans-serif;
+  letter-spacing:2px
+}
+.topbar a{
+  text-decoration:none;
+  border:1px solid #ffffff80;
+  border-radius:30px;
+  padding:10px 15px
+}
+.hero{
+  min-height:94svh;
+  display:grid;place-items:center;
+  text-align:center;
+  padding:95px 18px 55px;
+  background:linear-gradient(180deg,#26051666,#2605164d),url("hero-romance.png") center/cover no-repeat;
+  color:white;position:relative
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse at center,transparent 10%,#26051630 100%);
+  pointer-events:none
+}
+.hero-inner{
+  position:relative;
+  z-index:1;
+  max-width:760px;
+  padding:clamp(26px,5vw,48px);
+  border:1px solid #ffffff70;
+  border-radius:30px;
+  background:#38091f55;backdrop-filter:blur(5px);
+  box-shadow:0 20px 70px #21041470
+}
+.eyebrow{
+  font:600 11px Arial,sans-serif;
+  letter-spacing:.25em;text-transform:uppercase
+}
+h1{
+  font-size:clamp(46px,10vw,88px);
+  line-height:1.02;margin:18px 0;
+  text-shadow:0 5px 28px #24000f
+}
+.hero p{font-size:clamp(17px,3vw,21px);line-height:1.8;max-width:590px;margin:0 auto 25px}
+.pill{display:inline-block;background:#fff;color:#921b4c;text-decoration:none;border:0;border-radius:999px;padding:15px 25px;font:700 14px Arial,sans-serif;cursor:pointer;box-shadow:0 9px 28px #21041455;transition:.2s}
+.pill:hover{transform:translateY(-3px);box-shadow:0 14px 30px #21041466}
+main{width:min(900px,92%);margin:auto;padding:28px 0 65px}
+section{margin:25px 0;padding:clamp(25px,5vw,48px);background:#ffffffdf;border:1px solid #f3cbd9;border-radius:28px;box-shadow:0 14px 42px #8c244012}
+h2{font-size:clamp(27px,5vw,40px);font-weight:normal;color:var(--rose);text-align:center;margin:0 0 20px}
+p{font-size:17px;line-height:1.9}
+.center{text-align:center}
+.letter p{font-size:clamp(16px,2.5vw,18px);line-height:2;margin:0 0 17px}
+.signoff{text-align:center;color:var(--rose);font-style:italic;font-size:20px;margin-top:22px}
+.ornament{text-align:center;color:#c64e7d;font-size:24px;letter-spacing:9px;margin:18px}
+.flowers{display:flex;justify-content:center;align-items:center;gap:12px;font-size:clamp(38px,7vw,62px);margin:15px 0}
+.flowers span:nth-child(2){font-size:1.3em}
+.caption{color:#80566a;text-align:center;max-width:620px;margin:0 auto}
+.distance{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin:28px 0}
+.city{min-width:145px;padding:20px;border-radius:20px;background:linear-gradient(145deg,#fff0f5,#fff);border:1px solid #f2c4d5;text-align:center}
+.city strong{display:block;color:var(--rose);font-size:25px;margin-bottom:5px}
+.route{color:#c14a77;font-size:25px;letter-spacing:3px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:13px}
+.reason{padding:20px;border-radius:19px;background:linear-gradient(145deg,#fff0f5,#fff);border:1px solid #f6d6e1;line-height:1.7}
+.reason b{display:block;color:var(--rose);font-size:19px;margin-bottom:7px}
+.promise{background:linear-gradient(135deg,#641033,#a72b59);color:#fff;border:0}
+.promise h2{color:#fff}
+.promise p{text-align:center;max-width:690px;margin:12px auto}
+.quiz-question{text-align:center;font-size:20px}
+.answers{display:grid;grid-template-columns:1fr;gap:11px;max-width:520px;margin:22px auto}
+.answer{border:1px solid #efc2d3;background:#fff2f6;color:#702044;border-radius:15px;padding:15px;font:600 15px Arial,sans-serif;cursor:pointer;transition:.2s}
+.answer:hover{background:#fbd9e5;transform:translateY(-2px)}
+#quiz-result,#love-result{min-height:28px;text-align:center;color:var(--rose);font-weight:bold;line-height:1.7;margin-top:15px}
+.final{text-align:center;background:linear-gradient(150deg,#fff,#fff0f5)}
+.bigheart{font-size:55px;animation:heartbeat 1.6s infinite;display:inline-block}
+@keyframes heartbeat{50%{transform:scale(1.15)}}
+footer{text-align:center;padding:22px 15px 35px;color:#8d526b;font:12px Arial,sans-serif;letter-spacing:1px}
+.float-heart{position:fixed;bottom:-35px;z-index:5;pointer-events:none;color:#e65e91;animation:floatUp 7s linear forwards;text-shadow:0 2px 10px #a51f5040}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(35deg);opacity:0}}
+@media(max-width:560px){.topbar{padding:14px 4%;font-size:10px}.topbar a{padding:8px 11px}.hero{min-height:90svh}.distance{gap:9px}.city{min-width:125px;padding:16px 12px}.route{font-size:18px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="topbar"><span>♥ A LITTLE NOTE FOR YOU</span><a href="#letter">READ MY LETTER ↓</a></div>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Made with care, just for you</div>
+    <div class="bigheart">❤️</div>
+    <h1> Hauwa'u</h1>
+    <p>Some people make life happier. You are one of those people. I made this page to remaind you that you are special to me.</p>
+    <a class="pill" href="#letter">Open my heart</a>
+  </div>
+</header>
+<main>
+<section id="letter" class="letter">
+  <h2>A Heartfelt Love Letter 💌</h2>
+  <p>Dear Hauwa'u,</p>
+  <p>I know we met online, and I know we haven't had the chance to meet face to face yet. Still, getting to know you has become something I genuinely look forward to. A simple conversation with you can bring a smile to my face, and that is something I don't take for granted.</p>
+  <p>I don't want to pretend that I know everything about you already. There is so much more for us to discover, one conversation at a time. What I do know is that I enjoy the person I'm getting to know, and I'm grateful our paths crossed.</p>
+  <p>You told me that Zaria and Jos are far apart. You're right, the distance is real. But I believe two people can still learn about each other, share laughter, encourage each other and build a meaningful connection, even when they are not in the same place.</p>
+  <p>I have feelings for you, Hauwa'u, but I don't want you to feel rushed or pressured to say anything you are not ready to say. Your feelings matter. Take your time, be yourself, and let things grow naturally if that is what we both want.</p>
+  <p>Most of all, I hope I can keep giving you reasons to smile, reasons to feel respected, and reasons to feel comfortable being yourself around me. Thank you for allowing me to get to know you. ❤️</p>
+  <div class="ornament">♥ ✦ ♥ ✦ ♥</div>
+  <div class="signoff">With a sincere smile,<br>the guy in Zaria ❤️</div>
+</section>
+
+<section class="center">
+  <h2>A Little Garden of Romance 🌹</h2>
+  <div class="flowers" aria-label="Romantic flowers"><span>🌹</span><span>🌷</span><span>🌸</span><span>🌹</span></div>
+  <p class="caption">If I could send you a garden through this screen, I'd fill it with flowers as lovely as the smiles I hope this message brings you.</p>
+</section>
+
+<section>
+  <h2>The Zaria–Jos Distance Story 🌍</h2>
+  <p class="caption">Two cities, two busy lives, and one new connection getting to know its way.</p>
+  <div class="distance">
+    <div class="city"><strong>Zaria</strong><span>Where I am</span></div>
+    <div class="route">♡ · · · ♡</div>
+    <div class="city"><strong>Jos</strong><span>Where you are</span></div>
+  </div>
+  <p class="caption">Distance doesn't make us know each other less. It simply means we have to be patient, intentional and honest as we get to know one another.</p>
+</section>
+
+
+
+<section class="promise">
+  <h2>A Promise of Patience and Respect 🤍</h2>
+  <p>I won't ask you to force feelings. I won't measure your care by how quickly you reply or by whether you say the words I hope to hear.</p>
+  <p>I want us to be honest with each other, enjoy our conversations, and build trust at a pace that feels right for both of us.</p>
+  <p>If something beautiful grows between us, I'll be happy. And whatever happens, you deserve kindness and respect.</p>
+</section>
+
+<section>
+  <h2>A Little Love Quiz 💘</h2>
+  <p class="quiz-question">What do I hope you feel when you visit this page?</p>
+  <div class="answers">
+    <button class="answer" onclick="chooseAnswer(false)">A little confused 🤔</button>
+    <button class="answer" onclick="chooseAnswer(true)">Loved and appreciated ❤️</button>
+    <button class="answer" onclick="chooseAnswer(false)">Like you are taking an exam 😅</button>
+  </div>
+  <div id="quiz-result" aria-live="polite"></div>
+</section>
+
+<section class="final">
+  <div class="bigheart">❤️</div>
+  <h2>One Last Little Thing, Hauwa'u</h2>
+  <p class="caption">Would you be happy for us to keep talking, learning about each other, and seeing where this connection goes — one day at a time?</p>
+  <p class="caption">No pressure and no rush. I just wanted you to know that you are appreciated.</p>
+  <button class="pill" onclick="sendLove()">Send Love Back 💌</button>
+  <div id="love-result" aria-live="polite"></div>
+</section>
+</main>
+<footer>
+  <div style="font-size:25px;margin-bottom:10px">❤️ 🌹 ❤️</div>
+  Made with care for Hauwa'u.<br><br>
+  <span>Some beautiful connections grow one kind conversation at a time.</span>
+</footer>
+<script>
+function chooseAnswer(correct){
+ const el=document.getElementById('quiz-result');
+ el.textContent=correct?'You got it! More than anything, I hope this made you smile. ❤️':'Try again my love. 💗';
+}
+function makeHearts(){
+ for(let i=0;i<18;i++){
+  const h=document.createElement('span');h.className='float-heart';h.textContent=['♥','♡','✦'][i%3];
+  h.style.left=(Math.random()*100)+'vw';h.style.animationDelay=(Math.random()*1.3)+'s';
+  h.style.fontSize=(16+Math.random()*25)+'px';document.body.appendChild(h);
+  setTimeout(()=>h.remove(),8500);
+ }
+}
+function sendLove(){
+ document.getElementById('love-result').textContent='A little love received! Sending you warm wishes and a thousand smiles. ❤️';
+ makeHearts();
+}
+setInterval(()=>{if(!document.hidden){const h=document.createElement('span');h.className='float-heart';h.textContent=Math.random()>.5?'♥':'♡';h.style.left=Math.random()*100+'vw';h.style.fontSize=(13+Math.random()*13)+'px';document.body.appendChild(h);setTimeout(()=>h.remove(),7000)}},1700);
+</script>
+</body>
+</html>
